@@ -1,0 +1,22 @@
+# Render blueprint for the Pipelines backend (Express API).
+# In Render: New -> Blueprint -> connect this repo. It reads this file.
+# Set DATABASE_URL (your Supabase connection string) and JWT_SECRET when prompted.
+services:
+  - type: web
+    name: pipelines-api
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        sync: false        # paste your Supabase connection string in the Render dashboard
+      - key: JWT_SECRET
+        sync: false        # set a long random string in the Render dashboard
+      - key: JWT_EXPIRES_IN
+        value: 8h
+      - key: NODE_ENV
+        value: production
+      # JIOAUTIFY is intentionally NOT set -> Reliance SSO/STB sync stays OFF (password login works).

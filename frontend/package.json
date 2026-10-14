@@ -1,0 +1,43 @@
+{
+  "name": "pipelines-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pipelines \u2014 React SPA (CRA)",
+  "dependencies": {
+    "@svg-maps/india": "^2.0.0",
+    "axios": "^1.7.2",
+    "date-fns": "^3.6.0",
+    "exceljs": "^4.4.0",
+    "jspdf": "^2.5.2",
+    "jspdf-autotable": "^3.8.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-quill": "^2.0.0",
+    "react-router-dom": "^6.26.1",
+    "react-scripts": "5.0.1",
+    "recharts": "^2.12.7",
+    "xlsx": "^0.18.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:4000",
+  "overrides": {
+    "webpack-dev-server": "4.9.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
